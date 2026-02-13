@@ -69,3 +69,44 @@ button:hover {
         opacity: 0;
     }
 }
+/* Glow efekti */
+h1 {
+    text-shadow: 0 0 10px #ff6b6b,
+                 0 0 20px #ff8787,
+                 0 0 40px #ffc3a0;
+}
+
+/* Mobil uyum */
+@media (max-width: 600px) {
+    body {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    img {
+        width: 180px;
+    }
+}
+
+/* Kalp yağmuru */
+.rain-heart {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: rainFall 3s linear forwards;
+}
+
+@keyframes rainFall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
