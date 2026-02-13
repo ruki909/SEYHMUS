@@ -1,10 +1,39 @@
 body {
     text-align: center;
-    background: linear-gradient(to right, #ffafbd, #ffc3a0);
-    font-family: Arial;
+    background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ffd1dc, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+    font-family: Arial, sans-serif;
     margin-top: 100px;
+    overflow: hidden;
 }
 
+/* Arka plan hareketi */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Foto */
+img {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+/* Başlık */
+h1 {
+    color: #ff4757;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+/* Başlık hafif zıplama */
+@keyframes floatText {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Butonlar */
 button {
     padding: 15px 25px;
     font-size: 20px;
@@ -13,20 +42,30 @@ button {
     background: #ff6b6b;
     color: white;
     cursor: pointer;
-    .heart {
-        position: fixed;
-        font-size: 20px;
-        animation: explode 1s ease-out forwards;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+/* Hover efekti */
+button:hover {
+    background: #ff8787;
+    transform: scale(1.1);
+}
+
+/* Kalp patlaması */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
     }
-    
-    @keyframes explode {
-        0% {
-            transform: scale(0);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(-200px) scale(2);
-            opacity: 0;
-        }
+    100% {
+        transform: translateY(-200px) scale(2);
+        opacity: 0;
     }
 }
