@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         if(step === 1){
-            alert("Ez te ji hemû gerdûnê jî derbas heta bêdawî hez dikimmmm! 🚀");
+            alert("Ez te ji hemû gerdûnê jî derbas heta bêdawî hez dikimmm! 🚀");
         }
     
         step++;
@@ -51,4 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     });
+
 
