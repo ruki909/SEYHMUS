@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const questions = [
-        "Beni seviyor musun?",
-        "Kolayı bırakacak kadar çok seviyor musun?",
-        "Ömrümüzün sonuna kadar beraber olalım mı?"
+        "Tu ji min hez dikî?",
+        "Tu Pars jî pir hez dikî?",
+        "Ma em dikarin heta dawiya jiyanê bi hev re bimînin?"
     ];
     
     let step = 0;
@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const yesBtn = document.getElementById("yesBtn");
     const noBtn = document.getElementById("noBtn");
     
-    // YES tıklanınca
+    // EREEE tıklanınca
     yesBtn.onclick = () => {
     
         if(step === 0){
-            alert("Ben sana aşığım! ❤️");
+            alert("Ez ji te re aşiq im! ❤️");
         }
     
         if(step === 1){
-            alert("Seni tüm evrenin ötesinde sonsuzluğa kadar seviyommm! 🚀");
+            alert("Ez te ji hemû gerdûnê jî derbas heta bêdawî hez dikimmmm! 🚀");
         }
     
         step++;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     
-    // NO KAÇSIN
+    // NA KAÇSIN
     noBtn.addEventListener("mouseover", () => {
         const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
         const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
@@ -51,3 +51,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     });
+
