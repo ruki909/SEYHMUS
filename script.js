@@ -51,5 +51,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     });
+function startHeartRain(){
+    let interval = setInterval(()=>{
+
+        let heart = document.createElement("div");
+        heart.innerHTML = "💖";
+        heart.classList.add("rain-heart");
+
+        heart.style.left = Math.random() * window.innerWidth + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },3000);
+
+    },150);
+
+    // 5 saniye yağsın
+    setTimeout(()=>{
+        clearInterval(interval);
+    },5000);
+}
 
 
